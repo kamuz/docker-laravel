@@ -35,6 +35,8 @@ Test email with Tinker:
 php artisan tinker
 ```
 
+Send email:
+
 ```
 use Illuminate\Support\Facades\Mail;
 
