@@ -21,7 +21,13 @@ php artisan key:generate
 
 Check Laravel - [http://localhost:8000/](http://localhost:8000/)
 
-Check phpMyAdmin -
+Check phpMyAdmin (`laravel/laravel`) - [http://localhost:8080/](http://localhost:8080/)
+
+Run migrations:
+
+```
+php artisan migrate
+```
 
 Test email with Tinker:
 
