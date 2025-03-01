@@ -19,7 +19,7 @@ composer install
 php artisan key:generate
 ```
 
-Check Laravel - [http://localhost:8000/](http://localhost:8000/)
+Check Laravel - [http://localhost:8888/](http://localhost:8888/)
 
 Check phpMyAdmin (`laravel/laravel`) - [http://localhost:8080/](http://localhost:8080/)
 
