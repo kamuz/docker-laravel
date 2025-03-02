@@ -30,16 +30,14 @@ services:
     # MySQL
     db:
         image: mysql:8.0
+        volumes:
+            - db_data:/var/lib/mysql
         restart: unless-stopped
         environment:
-            MYSQL_DATABASE: ${DB_DATABASE:-laravel}
-            MYSQL_ROOT_PASSWORD: ${DB_PASSWORD:-root}
-            MYSQL_PASSWORD: ${DB_PASSWORD:-userpass}
-            MYSQL_USER: ${DB_USERNAME:-username}
-        volumes:
-            - ./.docker/mysql/dbdata:/var/lib/mysql
-        ports:
-            - "3388:3306"
+            MYSQL_ROOT_PASSWORD: password
+            MYSQL_DATABASE: laravel
+            MYSQL_USER: laravel
+            MYSQL_PASSWORD: laravel
         networks:
             - laravel
 
@@ -52,7 +50,7 @@ services:
         environment:
             PMA_HOST: db
             PMA_PORT: 3306
-            MYSQL_ROOT_PASSWORD: ${DB_PASSWORD:-userpass}
+            MYSQL_ROOT_PASSWORD: laravel
         networks:
             - laravel
 
@@ -65,7 +63,6 @@ services:
     # MailHog
     mailhog:
         image: mailhog/mailhog
-        container_name: mailhog
         ports:
           - "8025:8025"
           - "1025:1025"
