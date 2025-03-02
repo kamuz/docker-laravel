@@ -54,12 +54,6 @@ services:
         networks:
             - laravel
 
-    # Redis
-    redis:
-        image: redis:latest
-        networks:
-            - laravel
-
     # MailHog
     mailhog:
         image: mailhog/mailhog
