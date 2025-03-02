@@ -1,6 +1,6 @@
 # Setup Docker for Laravel projects
 
-Clone repo and build/run Docker:
+Clone repos:
 
 ```
 git clone git@github.com:kamuz/docker-laravel.git
@@ -8,6 +8,11 @@ git clone https://github.com/laravel/laravel.git laravel
 cp -rf docker-laravel/* laravel/
 cd laravel/
 cp env.example .env
+```
+
+Build Docker image and go to the bash:
+
+```
 docker-compose up -d
 docker-compose exec app bash
 ```
